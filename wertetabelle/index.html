@@ -2,7 +2,7 @@
    <head>
     <title>Wertetabelle</title>
       <script>
-        function Rechnung() {
+        function fRechnung() {
             var vKv = parseFloat (document.getElementById("kv").value);
             var vKf = parseFloat (document.getElementById("kf").value);
             var vStart = parseFloat (document.getElementById("start").value);
@@ -27,7 +27,7 @@
     </script>
     </head>
     <body>
-    
+    <h1>Wertetabelle einer linearen Kostenfunktion</h1>
     Variable Kosten: <input id="kv" type="text" value="2">       
     <br>
     fixe Kosten: <input id="kf" type="text" value="20">           
@@ -39,10 +39,10 @@
     Schrittweite: <input id="schritt" type="text" value="2">     
     <br>
 
-    <button onclick="Rechnung()">Berechne!</button>         
+    <button onclick="fRechnung()">Klicke hier für das Ergebniss!</button>         
     <br>
 
-    <div id="ausgabe"></div>
+    <div id="ausgabe">Hier kommt beim Klicken auf den Button eine Wertetabelle.</div>
 
 </body>
 </html>
