@@ -18,7 +18,6 @@
                
                var vZinsfaktor = 1 + vZinssatz / 100;
                var vRentenendwert = vRente * (Math.pow(vZinsfaktor, vLaufzeit) - 1) / (vZinsfaktor - 1);
-            
                var vZinsen;
                var vRentenbarwert;
                
@@ -38,7 +37,6 @@
                     } else {
                          vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vRentenbarwert) + "</td><td>" + fEuro(vZinsen) + "</td><td>" + fEuro(vRente) + "</td><td>" + fEuro(vRentenendwert) + "</td></tr>";
                     }
-                    var vRentenbarwert = vRentenendwert;
                     vJahr = vJahr+1;
                }
 
