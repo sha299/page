@@ -21,9 +21,7 @@
             
                var vZinsen;
                
-               var vJahr = 0;
-               var vRentenbarwert = vRentenendwert;
-               
+               var vJahr = 0;               
 
                var vAusgabe = "";
                vAusgabe = vAusgabe + "Der Rentenendwert beträgt " + fEuro(vRentenendwert) + ".<br><br>";
@@ -35,7 +33,7 @@
                     vZinsen = vRentenbarwert * (vZinssatz / 100);
                     
                     if (vJahr == vLaufzeit) {
-                         vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vRentenbarwert) + "</td><td></td><td></td></tr>";
+                         vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vRentenbarwert) + "</td><td>egal</td><td>egal</td><td>egal</td></tr>";
                     } else {
                          vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vRentenbarwert) + "</td><td>" + fEuro(vZinsen) + "</td><td>" + fEuro(vRente) + "</td><td>" + fEuro(vRentenendwert) + "</td></tr>";
                     }
