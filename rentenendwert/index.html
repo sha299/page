@@ -1,5 +1,4 @@
 <html>
-    
      <head>
      <title>Nachschüssige Rentenendwertrechner</title>
      <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
@@ -39,15 +38,10 @@
                     vKapitalJahresEnde = vKapitalJahresAnfang + vZinsen + vRente;
                     
                     if (vJahr == vLaufzeit) {
-
                          vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vKapitalJahresAnfang) + "</td><td></td><td></td><td></td></tr>";
-
                     } else {
-
                          vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + fEuro(vKapitalJahresAnfang) + "</td><td>" + fEuro(vZinsen) + "</td><td>" + fEuro(vRente) + "</td><td>" + fEuro(vKapitalJahresEnde) + "</td></tr>";
-
                     }
-
                     vKapitalJahresAnfang = vKapitalJahresEnde;
                     vJahr++;
                }
