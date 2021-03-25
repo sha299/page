@@ -6,7 +6,9 @@
 		
 		<script>
 			"use strict";
-			
+			function fEuro(number) {
+				return number.toFixed(2) + "€";
+			}
 			function fRechner () {
 				
 			var vRentenbarwert = 0;	
@@ -27,10 +29,10 @@
 			vRentenbarwert = vRentenendwert + vZinsen + vRente;
 				
 			if (vJahr == vLaufzeit){
-				vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vRentenbarwert.toFixed(2) + " €</td>";
+				vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" +  fEuro(vRentenbarwert) + " €</td>";
 						
 			} else {
-				vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" + vRentenendwert.toFixed(2) + " €</td><td>" + vZinsen.toFixed(2) + " €</td><td>" + vRente.toFixed(2) + " €</td><td>" + vRentenendwert.toFixed(2) + " €</td></tr>";
+				vAusgabe = vAusgabe + "<tr><td>" + vJahr + "</td><td>" +  fEuro(vRentenendwert) + " €</td><td>" +  fEuro(vZinsen) + " €</td><td>" + fEuro(vRente) + " €</td><td>" +  fEuro(vRentenendwert) + " €</td></tr>";
 						
 			}
 					
