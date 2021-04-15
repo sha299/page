@@ -1,0 +1,53 @@
+<html>
+     <head>
+     <title>Angebotsmonopol</title>
+     <meta http-equiv="Conten-Type" content="text/html; charset=utf-8">
+
+     <script>
+          "use strict";
+     
+          function fEuro(number) {
+               return number.toFixed(2) + " €";
+          }
+          
+          
+          function fRechner() {
+               var vFixekosten = parseFloat(document.getElementById("idFixekosten").value);
+               var vVariablekosten = parseFloat(document.getElementById("idVariablekosten").value);
+			   var vMenge = parseFloat(document.getElementById("idMenge").value);
+			   var vAnfang = 0;
+               
+               var vPreisstueck = 10 - 0,1 * vMenge;
+               var vErloes = vPreisstueck * vMenge;
+               var vKosten = vFixekosten + vVariablekosten * vMenge;
+               var vGewinn = vErloes - vKosten;
+
+               var vAusgabe = "";
+               
+               vAusgabe = vAusgabe + <table border=1>;
+               vAusgabe = vAusgabe + <tr><th>Menge</th><th>Preis pro Stück</th><th>Erlös</th><th>Kosten</th><th>Gewinn</th</tr>;
+
+               while (vAnfang <= vMenge & vPreisstueck == 0 & vErloes == 0) {
+                  
+                    vAnfang = vAnfang+5;
+               }
+
+               vAusgabe = vAusgabe + "</table>";
+               document.getElementById("idAusgabe").innerHTML = vAusgabe;
+          } 
+          </script>
+    </head>
+
+
+    <body>
+    <h1>Angebotsmonopol</h1>
+
+    Fixekosten: <input id="idZinssatz" type="text" value="10">%<br>
+    Variablekosten: <input id="idStartkapital" type="text" value="0,20">€<br>
+
+    <button onClick="fRechner()">Berechnen</button><br><br>
+
+    <div id="idAusgabe">Klicken Sie auf den Button Berechnen, damit hier eine Tabelle erscheint...</div>
+
+    </body>
+</html>
